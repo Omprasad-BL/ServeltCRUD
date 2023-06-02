@@ -56,7 +56,7 @@ public List<Users> fetch(String name) {
 	if (list.isEmpty()) {
 		return null;
 	} else {
-		return (List<Users>) list.get(0);
+		return list;
 	}
 	
 }

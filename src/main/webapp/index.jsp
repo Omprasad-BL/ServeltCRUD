@@ -7,23 +7,37 @@
 
 <style type="text/css">
 body{
-display: grid;
-justify-content: center;
 background:linear-gradient(70deg,lightgreen,orange);
-gap:20px;
-
+  display: flex;
+  height: 100svh;
+  width: 100svw;
+  overflow-x: hidden;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+form{
+  height: 250px;
+  width: 250px;
+  box-shadow: 3px 3px 3px gray;
+  transition: all 0.5s;
+  background-color: lightgreen;
+}
+form:hover{
+  transform: scale(1.5s);
 }
 *{
 font-family: arial;
 font-weight: bold;}
 form{
-padding: 20px;
 display: grid;
 align-items: center;
 justify-content: center;
 border:2px solid black;
 gap:10px;
 }
+
 </style>
 </head>
 <body>

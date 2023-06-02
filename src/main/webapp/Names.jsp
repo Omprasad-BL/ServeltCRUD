@@ -10,30 +10,9 @@
 </head>
 <body>
 
-
-   <%
-        Users  name= (Users) request.getAttribute("name");
-     %>
      
+   
      <table border="1">
-     
-     <tr>
-			<th>ID</th>
-			<th>Name</th>
-			<th>Mobile</th>
-		</tr>
-		
-		<tr>
-		  	<tr>
-			<td><%=name.getId()%></td>
-			<td><%=name.getName()%></td>
-			<td><%=name.getPhone()%></td>
-		</tr>
-     
-     </table>
-     
-      
-<table>
 		<tr>
 			<th>ID</th>
 			<th>Name</th>
@@ -41,9 +20,11 @@
 		</tr>
          
           <% 
+          String  name= (String) request.getAttribute("name");
 
           List<Users> list=(List<Users>) request.getAttribute("lst");
 	         for(Users ur:list){
+	        	 if(ur.getName().equals(name)){
 	    
 	      %>
 	      
@@ -55,11 +36,15 @@
 	      
 	      <%
             }
+	         }
 	       
 	      %>
 
 	
 	</table> 
+     
+      
+
 
 </body>
 </html>

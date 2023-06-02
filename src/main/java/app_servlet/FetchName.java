@@ -14,16 +14,16 @@ public class FetchName extends HttpServlet{
 	
 		protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 			
-			String name= req.getParameter("sname");
+			String name= req.getParameter("uname");
 			
 			 DataDao dao=new DataDao();
-			 List<Users> user;
+			 List<Users> users;
 			     
-			    user=  dao.fetch(name);
+			    users=  dao.fetch();
 
-			    		req.setAttribute("lst", dao.fetch());
+			    		req.setAttribute("lst",users);
 			    		req.setAttribute("name", name);
-			    		res.setContentType("text/html ");
+//			    		res.setContentType("text/html ");
 //			    		res.getWriter().print("<h1> all  Data Fetched  Successfully </h1>"
 //			    				);
 			    		req.getRequestDispatcher("Names.jsp").include(req, res);
